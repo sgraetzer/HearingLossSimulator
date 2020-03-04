@@ -1,8 +1,9 @@
-# Added this to load hearinglossimulator module from local directory
+
 # Author: Simone Graetzer
 # Modify input compression and loss values as appropriate
 # Specify input and output file names
 
+# Added this section to load hearinglossimulator module from local directory
 # Replace following line with path to directory
 MODULE_PATH = "/home/simone/hls/hearinglosssimulator/__init__.py"
 MODULE_NAME = "hearinglosssimulator"
@@ -13,6 +14,7 @@ spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
 module = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = module 
 spec.loader.exec_module(module)
+#
 
 import hearinglosssimulator as hls
 import sys
